@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ToDo List</title>
+</head>
+<body>
+    <div class="todo" data-js-todo>
+        <h1 class="todo__title">ToDo List</h1>
+        <div class="todo__date" id="current-date"></div>
+        
+        <form class="todo__form">
+            <div class="tofo__field field">
+                <label for="new-task" class="field__label">Новая задача</label>
+                <input type="text" class="field__input" id="new-task" placeholder="Введите текст задачи...">
+                <label for="task-description" class="field_label">Описание (необязательно)</label>
+                <textarea id="task-description" class="field__input" rows="2" placeholder="Подробности задачи"></textarea>
+            </div>
+            
+            <div class="field">
+                <label for="task-due-date" class="field__label">Срок выполнения</label>
+                <input type="date" class="field__input due-date-input" id="task-due-date">
+            </div>
+            
+            <div class="field">
+                <label for="task-category" class="field__label">Категория</label>
+                <select id="task-category" class="field__input category-select">
+                    <option value="general" selected>Общее</option>
+                    <option value="work">Работа</option>
+                    <option value="personal">Личное</option>
+                </select>
+            </div>
+            <button class="button" type="submit">Добавить задачу</button>
+        </div>
+    </form>
+
+    <form class="todo__form">
+        <div class="todo__field field">
+            <label class="field__label" for="search-task">Поиск задач</label>
+            <input type="search" class="field__input" id="search-task" autocomplete="off" placeholder="Введите текст для поиска">
+        </div>
+    </form>
+
+    <div class="todo__total-tasks">Задач: <span>0</span>
+    </div>
+    <button class="todo__delete-all-button" type="button">Удалить все</button>
+
+    <ul class="todo__list" data-js-todo-list>
+
+    </ul>
+
+    <div class="todo__empty-message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
